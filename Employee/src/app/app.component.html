@@ -1,0 +1,68 @@
+<h1>1. Hide the Employee Salary</h1>
+<div class="body">
+<h4>Employee Details</h4>
+<div class="table-container">
+<table class="employee-table">
+  <thead>
+    <tr>
+      <th>EMP Id</th>
+      <th>EMP Name</th>
+      <th>Designation</th>
+      <th>Location</th>
+      <th>Address</th>
+      <th *ngIf="showSalary">Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td>{{ employee.id }}</td>
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.designation }}</td>
+      <td>{{ employee.location }}</td>
+      <td>{{ employee.address }}</td>
+      <td *ngIf="showSalary">{{ employee.salary  }}</td>
+    </tr>
+  </tbody>
+  <div class="button1">
+  <button  (click)="toggleSalaryDisplay()">
+    {{ showSalary ? 'Hide Salary' : 'Show Salary' }}
+  </button>
+</div>
+</table>
+</div>
+</div>
+
+<h1>2. Hide the Employee Id</h1>
+
+<div class="body">
+  <h4>Employee Details</h4>
+  <div class="table-container">
+  <table class="employee-table">
+    <thead>
+      <tr>
+        <th *ngIf="showId">EMP Id</th>
+        <th>EMP Name</th>
+        <th>Designation</th>
+        <th>Location</th>
+        <th>Address</th>
+        <th >Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td *ngIf="showId">{{ employee.id }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.designation }}</td>
+        <td>{{ employee.location }}</td>
+        <td>{{ employee.address }}</td>
+        <td >{{ employee.salary  }}</td>
+      </tr>
+    </tbody>
+    <div class="button1">
+    <button  (click)="toggleIdDisplay()">
+      {{ showSalary ? 'Hide Id' : 'Show Id' }}
+    </button>
+  </div>
+  </table>
+  </div>
+  </div>
