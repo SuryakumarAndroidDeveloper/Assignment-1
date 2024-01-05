@@ -1,0 +1,47 @@
+<div class="hotel-form">
+    <form   (ngSubmit)="onSubmit()">
+      <label for="roomtype">Room/Suite Type</label>
+      <select id="roomtype" [(ngModel)]="formData.roomtype"name="roomtype">
+        <option value="" disabled selected>Select Room/Suite</option>
+        <option *ngFor="let Room of RoomType" [value]="Room">
+        {{Room}}
+    </option>
+      </select>
+      <label for="noofroom">No of room/suite</label>
+      <select id="noofroom"[(ngModel)]="formData.roomno" name="roomno">
+        <option value="" disabled selected>No of room/suite</option>
+        <option *ngFor="let number of RoomNo" [value]="number">
+        {{number}}
+    </option>
+      </select>
+      <label for="person">No Of Persons</label>
+              <select id="person"[(ngModel)]="formData.person" name="person">
+                <option value="" disabled selected>0</option>
+                <option *ngFor="let person of PersonNo" [value]="person">
+                    {{person}}
+                </option>
+                </select>
+                <label for="children">No Of Childrens</label>
+                <select id="children"[(ngModel)]="formData.children" name="children">
+                    <option value="" disabled selected>0</option>
+                    <option *ngFor="let children of ChildrenNo" [value]="children">
+                        {{children}}
+                    </option>
+                    </select>
+                    <label for="Restaurantfacilities">Restaurant facilities?</label>
+                    <select id="Restaurantfacilities"[(ngModel)]="formData.facilities" name="facilities">
+                        <option value="" disabled selected>Do you want restaurant facilities?</option>
+                        <option *ngFor="let facilities of Restaurantfacilities" [value]="facilities">
+                            {{facilities}}
+                        </option>
+                        </select>
+                        <br><br>
+              <div class="container">
+              <label for="Total_Cost" class="cost">Total Cost($):</label>
+             <button id="Total_Cost" class="btncost">0</button>
+            </div><br>
+            <button type="submit">Register</button>
+      </form>
+      <app-child [data]="formData"></app-child>
+      </div>
+      

@@ -1,0 +1,11 @@
+<div>
+    <h2>Received Data in Child Component</h2>
+    <p>Room Type: {{ data.roomtype }}</p>
+    <p>No Of Rooms: {{ data.roomno }}</p>
+    <p>No Of Persons: {{ data.person }}</p>
+    <p>No Of Childrens: {{ data.children }}</p>
+    <p>Restaurant Facilities: {{ data.facilities }}</p>
+    <!-- Display other form data here -->
+  </div>
+  <button (click)="showSuccess()">Click me</button>
+<div *ngIf="successMessage">{{ successMessage }}</div>

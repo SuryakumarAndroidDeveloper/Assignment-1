@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link  href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+  
+</head>
+<body>
+  <main class="layout-container">
+
+<app-header></app-header>
+
+    <main class="flx-main-container" id="#home">
+
+      <nav class="flx-nav">
+        <div class="main-container">
+          <div class="item ">
+            <a >FLIGHT BOOKING</a>
+          </div>
+          <div class="item ">
+            <a>BUS BOOKING</a>
+          </div>
+          <div class="item ">
+            <a>CAR BOOKING</a>
+          </div>
+          <div class="item ">
+            <a>HOTEL BOOKING</a>
+          </div>
+        </div>
+      </nav>
+
+      <article class="flx-article-section">
+        <section id="#flight">
+          <app-hotel></app-hotel>
+        </section>
+      </article>
+
+      <aside class="flx-aside">
+        <div class="items ">
+          <p>Where?</p>
+          <h6>You can reach us for any location</h6>
+          <p>When?</p>
+          <h6>You can reach us for plan your trip</h6>
+          <p>Transport?</p>
+          <h6>You can reach us for Flight/Bus/Car/Hotel Booking over Country.</h6>
+        </div>
+      </aside>
+
+    </main>
+
+ <app-footer></app-footer>
+ 
+  
+  </main>
+ 
+</body>
+</html>
+  <!-- <nav class="navbar">
+    <ul>
+   <li> <a>TravelApp</a></li>
+    <li><a  >Home</a></li>
+    <li><a >Book Tickets</a></li>
+    <li><a >Travel Packages</a></li>
+    <li><a >About Us</a></li>
+    <li><a >Contact Us</a></li>
+    <div class="rightcorner">
+    <li ><a ><i class="fa-solid fa-user"></i> Sign Up</a></li>
+    <li ><a ><i class="fa-solid fa-right-to-bracket"></i>Sign In</a></li>
+  </div>
+  </ul>
+  </nav> -->
+  <!-- <footer >
+    <div class="text-center p-3" >
+      Address :
+      <a class="text-body" >Hyderbad,India Pin 52008</a>
+    </div>
+  </footer>  -->
+  <router-outlet></router-outlet>
